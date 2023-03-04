@@ -25,7 +25,19 @@ def heatwave_month():
 	elif method == 'Nizamabad':
 		result = Nizamabad(month)
 	else:
-		result = warangal(month)			
+		result = warangal(month)
+	if method=='Adilabad':
+		if result>=35:
+			op="Be careful. There is chance of occuring heatwaves in adilabad in ",month," 2023"
+		else:
+			op="you will be safe, there will be no chance of occuring heawaves"
+	esle:
+		if y>=40:
+			op="Be careful. There is chance of occuring heatwaves in Kaimnagar in ",month," 2023"
+		elif:
+			op="there may be chance of occuring the heatwaves
+		else:
+			op="you will be safe, there will be no chance of occuring heawaves"
 	return render_template('result.html',result=result)
 
 if __name__=="__main__":
