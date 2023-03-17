@@ -56,8 +56,8 @@ def month_diff(dt1,dt2):
    delta = relativedelta(date2, date1)
    months_diff = delta.months + 12 * delta.years
    return months_diff
-def adilabad(date):
-    df=pd.read_csv("datafiles(aqi)\\Adilabad.csv")
+def adila(date):
+    df=pd.read_csv(r"AQI\datafiles\Adilabad.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
     df1=df['PM10']
@@ -72,20 +72,23 @@ def adilabad(date):
     model2_fit = model2.fit()
     model3 = ARIMA(df3, order=(1,1,1))
     model3_fit = model3.fit()
-    diff=month_diff('2022-01-12',date)
+    diff=month_diff('2022-01-12', date)
     PM10prediction = model1_fit.forecast(diff)
     NOxprediction = model2_fit.forecast(diff)
     SO2prediction = model3_fit.forecast(diff)
     PM10prediction = PM10prediction.to_numpy()
     NOxprediction = NOxprediction.to_numpy()
     SO2prediction = SO2prediction.to_numpy()
+    PM10=PM10prediction[diff-1]
+    NOx=NOxprediction[diff-1]
+    SO2=SO2prediction[diff-1]
     PM10=get_PM10_subindex(PM10)
     NOx=get_NOx_subindex(NOx)
     SO2=get_SO2_subindex(SO2)
     AQI=max(PM10,NOx,SO2)
     return AQI
-def karimnagar(date):
-    df=pd.read_csv("datafiles(aqi)\\Karimnagar.csv")
+def karim(date):
+    df=pd.read_csv(r"AQI\datafiles\Karimnagar.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
     df1=df['PM10']
@@ -107,13 +110,16 @@ def karimnagar(date):
     PM10prediction = PM10prediction.to_numpy()
     NOxprediction = NOxprediction.to_numpy()
     SO2prediction = SO2prediction.to_numpy()
+    PM10=PM10prediction[diff-1]
+    NOx=NOxprediction[diff-1]
+    SO2=SO2prediction[diff-1] 
     PM10=get_PM10_subindex(PM10)
     NOx=get_NOx_subindex(NOx)
     SO2=get_SO2_subindex(SO2)
     AQI=max(PM10,NOx,SO2)
     return AQI
-def khammam(date):
-    df=pd.read_csv("datafiles(aqi)\\Khammam.csv")
+def kham(date):
+    df=pd.read_csv(r"AQI\datafiles\Khammam.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
     df1=df['PM10']
@@ -135,13 +141,16 @@ def khammam(date):
     PM10prediction = PM10prediction.to_numpy()
     NOxprediction = NOxprediction.to_numpy()
     SO2prediction = SO2prediction.to_numpy()
+    PM10=PM10prediction[diff-1]
+    NOx=NOxprediction[diff-1]
+    SO2=SO2prediction[diff-1]
     PM10=get_PM10_subindex(PM10)
     NOx=get_NOx_subindex(NOx)
     SO2=get_SO2_subindex(SO2)
     AQI=max(PM10,NOx,SO2)
     return AQI
-def nizamabad(date):
-    df=pd.read_csv("datafiles(aqi)\\Nizamabad.csv")
+def nizam(date):
+    df=pd.read_csv(r"AQI\datafiles\Nizamabad.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
     df1=df['PM10']
@@ -163,13 +172,16 @@ def nizamabad(date):
     PM10prediction = PM10prediction.to_numpy()
     NOxprediction = NOxprediction.to_numpy()
     SO2prediction = SO2prediction.to_numpy()
+    PM10=PM10prediction[diff-1]
+    NOx=NOxprediction[diff-1]
+    SO2=SO2prediction[diff-1]
     PM10=get_PM10_subindex(PM10)
     NOx=get_NOx_subindex(NOx)
     SO2=get_SO2_subindex(SO2)
     AQI=max(PM10,NOx,SO2)
     return AQI
-def warangal(date):
-    df=pd.read_csv("datafiles(aqi)\\Warangal.csv")
+def waran(date):
+    df=pd.read_csv(r"AQI\datafiles\Warangal.csv")
     df['Date'] = pd.to_datetime(df['Date'])
     df.set_index('Date', inplace=True)
     df1=df['PM10']
@@ -191,6 +203,9 @@ def warangal(date):
     PM10prediction = PM10prediction.to_numpy()
     NOxprediction = NOxprediction.to_numpy()
     SO2prediction = SO2prediction.to_numpy()
+    PM10=PM10prediction[diff-1]
+    NOx=NOxprediction[diff-1]
+    SO2=SO2prediction[diff-1]
     PM10=get_PM10_subindex(PM10)
     NOx=get_NOx_subindex(NOx)
     SO2=get_SO2_subindex(SO2)

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet" />
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <img  class="logo-img" src="https://res.cloudinary.com/dcfzq326i/image/upload/v1678630515/dreamstime_m_136365877_hlbmtn.jpg" width="130" height="130" alt="Logo" ALIGN=CENTER>
+             <h2 class="chib">CHIBI CREW</h2>
+        </div>
+         <ul>
+            <li><a href="./Home.html">Home</a></li>
+             <li><a href="./Project.html">Project</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </header>
+    <main class="home">
+        <div class="wrapper">
+            <div class="home-left">
+                <h1 style="color: white">Heatwaves</h1>
+                <img src="https://res.cloudinary.com/dcfzq326i/image/upload/v1677947968/IMG-20230304-WA0029_rnkblq.jpg" alt="Heatwave">
+                <form  class="form"  action="/predict" method="post">
+                
+                <select class="select1 " name="method" id="method">
+                    <option value="Adilabad"> Adilabad </option>
+                    <option value="Khammam"> Khammam </option>
+                    <option value="Karimnagar"> Karimnagar </option>
+                    <option value="Nizamabad"> Nizamabad </option>
+                    <option value="Warangal"> Warangal </option>
+                </select>
+                <label for="" style="font-size: 20px"><b>Month:</b></label>
+                <select class="select2" name="month" id="month">
+                    <option value="Jan">January</option>
+                    <option value="Feb"> February</option>
+                    <option value="Mar"> March </option>
+                    <option value="Apr"> April </option>
+                    <option value="May"> May </option>
+                    <option value="Jun"> June</option>
+                    <option value="Jul">July</option>
+                    <option value="Aug"> August </option>
+                    <option value="Sep"> September </option>
+                    <option value="Oct"> October </option>
+                    <option value="Nov"> November </option>
+                    <option value="Dec"> December </option>
+                </select>
+                <button class="submit">Submit</button>
+               </form>
+            </div>
+            <div class="home-right"> 
+                <h1 style="color: white">AQI</h1> 
+                <img src="https://res.cloudinary.com/dcfzq326i/image/upload/v1677948639/istockphoto-1256527934-612x612_janp6z.jpg" alt="AQI">
+          
+            <form class="form" action="/aqi" method="post">    
+                <select class="select3" name="method2" id="method2">
+                    <option value="Adilabad"> Adilabad </option>
+                    <option value="Khammam"> Khammam </option>
+                    <option value="Karimnagar"> Karimnagar </option>
+                    <option value="Nizamabad"> Nizamabad </option>
+                    <option value="Warangal"> Warangal </option>
+                </select>
+                <label for="date" style="font-size: 20px"><b>Date:</b></label>
+                <input type="text" id="date" name="date" class="select3" value="" placeholder="yyyy-dd-mm" required>
+                <button class="submit">Submit</button>
+            </form>
+             </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <small>@Copyright CHIBICREW</small>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatwaves</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div>
+            <img  class="logo-img" src="https://res.cloudinary.com/dcfzq326i/image/upload/v1678630515/dreamstime_m_136365877_hlbmtn.jpg" width="130" height="130" alt="Logo" ALIGN=CENTER>
+             <h2 class="chib">CHIBI CREW</h2>
+        </div>
+         <ul>
+            <li><a href="./Home.html">Home</a></li>
+             <li><a href="./Project.html">Project</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </header>
+    <center>
+    <main class="result">
+        <div class="new">
+            <p style="font-size:25px"><b>The Maximum Temparature is</b><p>
+            <p style="font-size:25px"><b>{{result}}</b><p>
+            <p style="font-size:20px"><b>{{op}}</b><p>    
+         </div>
+    </main>
+    </center>
+    <footer class="footer">
+        <div>
+            <small>@Copyright CHIBI CREW</small>
+        </div>
+    </footer>
+</body>
+
+</html>

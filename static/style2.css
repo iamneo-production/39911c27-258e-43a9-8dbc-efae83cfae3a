@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #EEE9DA;
+}
+.header{
+    background-color:#00235B ;
+    height:10vh;
+    display: flex;
+    justify-content: space-between;
+}
+.header div {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+.logo-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+.chib{
+    font-size: 25px;
+    color: white;
+    padding: 50px;
+}
+.header ul{
+    display: flex;
+    align-items: center;
+    font-size: 55px;
+    margin-right: 200px;
+}
+ul>li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    padding: 34px;
+    color: white;
+}
+ul li a:hover{
+    color:  rgb(226, 249, 97);
+}
+.footer{
+    background-color:#00235B;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.footer div small{
+    font-size:20px;
+    color: white;
+}
+main{
+    display: flex;
+    min-height: 85vh;
+    justify-content: space-between;
+
+}
+.class1{
+    /* background-color: #93BFCF; */
+    background-image: url('https://res.cloudinary.com/dcfzq326i/image/upload/v1678967237/color-2174052_1280_mx4whk.png');
+    width: 69%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sub1 {
+    background:rgba(255, 255, 255, .3);
+    width: 70%;
+    min-height: 39vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sub-child1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 95%;
+    height: 5vh;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+   
+}
+.sub-child2{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    text-align: justify;
+    width: 95%;
+
+}    
+.sub2{
+    background:rgba(255, 255, 255, .3);
+    width: 70%;
+    min-height: 39vh;
+    border-radius: 20px;
+}
+
+.class2{
+    background-image: url('https://res.cloudinary.com/dcfzq326i/image/upload/v1678967237/color-2174052_1280_mx4whk.png');
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.map img{
+    width:250px;
+    height:100px;
+    border-radius: 10px;
+}
